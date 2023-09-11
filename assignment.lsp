@@ -1,3 +1,6 @@
+; Ethan Roldan
+; CSE 240
+
 ; These are my basic logic gate functions
 
 ; This is the logic for an AND gate
