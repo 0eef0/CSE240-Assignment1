@@ -42,13 +42,7 @@
 
 ; This is the final bit adder function
 (defun bitAdder(x a b)
-    (setq ans "(")
-    (setq ans (concatenate 'string ans (write-to-string (sum-bit x a b))))
-    (setq ans (concatenate 'string ans " . "))
-    (setq ans (concatenate 'string ans (write-to-string (carry-out x a b))))
-    (setq ans (concatenate 'string ans ")"))
-
-    (return-from bitAdder ans)
+    (return-from bitAdder (cons (sum-bit x a b) (carry-out x a b)))
 )
 
 (print (bitAdder 0 0 0))
@@ -62,11 +56,11 @@
 
 
 ; These are the given test outputs for my function. They all match what was given in the assignment.
-; "(0 . 0)"
-; "(1 . 0)"
-; "(1 . 0)"
-; "(0 . 1)"
-; "(1 . 0)"
-; "(0 . 1)"
-; "(0 . 1)"
-; "(1 . 1)"
+; (0 . 0)
+; (1 . 0)
+; (1 . 0)
+; (0 . 1)
+; (1 . 0)
+; (0 . 1)
+; (0 . 1)
+; (1 . 1)
